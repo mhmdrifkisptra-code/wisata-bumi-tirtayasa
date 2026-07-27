@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: #fff;
+    color: #111;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #eee;
+}
+.brand {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #111;
+}
+.logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.brand-title {
+    font-weight: 800;
+}
+.brand-subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+.nav-links a.active {
+    color: #2e7d32;
+}
+
+.content {
+    min-height: 80vh;
+}
+.section {
+    padding: 40px 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer {
+    padding: 20px 16px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+}
+
+.hero{
+  min-height: calc(100vh - 64px);
+  background: url("../images/Bumi.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 48px 16px;
+  color: #fff;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin-bottom: 22px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+}
+
+.section-title {
+    margin-bottom: 16px;
+}
+.section-title h2 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+.section-title p {
+    color: #555;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 16px;
+    text-decoration: none;
+    color: #111;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease;
+}
+.card:hover {
+    transform: translateY(-2px);
+}
+.card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.card-desc {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 520px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================
+   BERITA TERBARU
+===================== */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.news-item {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.news-thumb {
+    height: 140px;
+    background: #ddd;
+}
+
+.news-body {
+    padding: 14px;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.news-title {
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.news-excerpt {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 12px;
+}
+
+.gallery-item{
+  border:1px solid #eee;
+  border-radius: 14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+.gallery-item img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+
+.gallery-caption{
+  padding: 12px;
+}
+
+@media (max-width: 900px){
+  .gallery-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 520px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== Page Hero (untuk halaman seperti Tiket/Peta/Aturan) ===== */
+.page-hero{
+  position: relative;
+  min-height: 220px;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  margin-bottom: 18px;
+}
+
+.page-hero__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.25));
+}
+
+.page-hero__content{
+  position:relative;
+  padding-top: 28px;
+  padding-bottom: 22px;
+}
+
+.page-hero__content h1{ font-size: 44px; margin-bottom: 8px; font-weight: 900; }
+.page-hero__content p{ color: rgba(255,255,255,.92); max-width: 700px; }
+
+.page-hero--tiket{
+  background: url("../images/BUMI.jpg") center/cover no-repeat;
+}
+
+/* ===== Tiket layout ===== */
+.tiket-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tiket-card{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+.tiket-card h3{
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 900;
+}
+
+.tiket-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.tiket-list li{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border:1px solid #f1f1f1;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.tiket-list li span{ color:#333; }
+.tiket-list li strong{ color:#111; }
+
+.tiket-note{
+  margin-top: 12px;
+  font-size: 12px;
+  color:#666;
+}
+
+@media (max-width: 900px){
+  .tiket-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-hero__content h1{ font-size: 34px; }
+}
+@media (max-width: 520px){
+  .tiket-grid{ grid-template-columns: 1fr; }
+}
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:#1f7a39;
+  color:#fff !important;
+  font-weight:800;
+  text-decoration:none !important;
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+.btn-primary:hover{
+  transform: translateY(-1px);
+}
+
+/* =====================
+ TAMPILAN MOBILE
+===================== */
+@media (max-width: 576px) {
+    .navbar {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        text-align: center;
+        padding: 8px 4px;
+        border-radius: 20px;
+        background: #f3f4f6;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 28px 18px;
+        align-items: center;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .section {
+        padding: 32px 16px;
+        max-width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-desc {
+        font-size: 14px;
+    }
+}
+
